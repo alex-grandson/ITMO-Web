@@ -1,2 +1,8 @@
 <table>
 <meta charset="UTF-8">
+ <tr> <td>1</td> <td>1</td> <td>1</td>  <td>No</td> <td>1.7881393432617E-5</td> </tr>
+ <tr> <td>1</td> <td>1</td> <td>1</td>  <td>No</td> <td>1.9073486328125E-5</td> </tr>
+ <tr> <td>1</td> <td>-2</td> <td>2</td>  <td>No</td> <td>1.6927719116211E-5</td> </tr>
+ <tr> <td>1</td> <td>-2</td> <td>2</td>  <td>No</td> <td>2.0980834960938E-5</td> </tr>
+ <tr> <td>1</td> <td>1</td> <td>2</td>  <td>No</td> <td>1.6927719116211E-5</td> </tr>
+ <tr> <td>1</td> <td>1</td> <td>2</td>  <td>No</td> <td>1.4066696166992E-5</td> </tr>

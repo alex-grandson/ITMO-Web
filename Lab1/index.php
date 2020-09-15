@@ -36,15 +36,31 @@
                 </h3>
                 <img src="img/pic1.jpg" alt="picture" class="main-offer__pic">
                 <p class="main-offer__text">
-                  Допустимые значения R: {1, 2, 3, 4, 5}
+                  Выберете R:
+                  <select class="main-offer__select main-offer__select_R" name="r" id="r">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                  </select>
                 </p>
-                <input class="main-offer__input" type="text" name="r" id="r" placeholder="Введите R" required>
                 <p class="main-offer__message" id="messageR"></p>
 
                 <p class="main-offer__text">
-                  Допустимые значения X: {-2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2}
+                  Выберете X:
+                  <select class="main-offer__select main-offer__select_R" name="x" id="x">
+                      <option value="-2">-2</option>
+                      <option value="-1.5">-1.5</option>
+                      <option value="-1">-1</option>
+                      <option value="-0.5">-0.5</option>
+                      <option value="0">0</option>
+                      <option value="0.5">0.5</option>
+                      <option value="1">1</option>
+                      <option value="1.5">1.5</option>
+                      <option value="2">2</option>
+                  </select>
                 </p>
-                <input class="main-offer__input" type="text" name="x" id="x" placeholder="Введите X" required>
                 <p class="main-offer__message" id="messageX"></p>
 
                 <p class="main-offer__text">
