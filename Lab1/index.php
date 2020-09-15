@@ -63,25 +63,8 @@
         </div>
     </div>
 </section>
-<!-- Индикация процесса отправки формы -->
-<div id="loader">
-    <img src="img/ripple.svg">
-</div>
-
-<!-- Сообщение "спасибо" после отправки формы -->
-<div id="overlay">
-    <div id="thx">
-        Спасибо! Мы обязательно вам перезвоним
-    </div>
-</div>
-<footer>
-    <div class="container">
-
-    </div>
-</footer>
 
 <script src="js/jquery-3.5.1.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
 <script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>

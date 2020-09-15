@@ -55,7 +55,7 @@ $(document).ready(function() {
         var isOkValues = isValuesValid();
         if (isOkFields && isOkValues) {
           $(this).parent('form').submit();
-          $('#loader').fadeIn();
+
           var $form = $(form);
           var $formId = $(form).attr('id');
 
@@ -65,27 +65,7 @@ $(document).ready(function() {
                       url: $form.attr('action'),
                       data: $form.serialize(),
                   })
-                  .always(function(response) {
-                      setTimeout(function() {
-                          $('#loader').fadeOut();
-                      }, 800);
-                      setTimeout(function() {
-                          $('#overlay').fadeIn();
-                          $form.trigger('reset');
-                          //строки для остлеживания целей в Я.Метрике и Google Analytics
-                      }, 1100);
-                      $('#overlay').on('click', function(e) {
-                          $(this).fadeOut();
-                      });
-
-                  });
-
           }
         }
-
-
     })
-
-
-
 });
