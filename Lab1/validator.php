@@ -21,7 +21,8 @@
     $x = floatval(htmlspecialchars($_GET["x"]));
     $y = floatval(htmlspecialchars($_GET["y"]));
     $result = "";
-    if (!empty($r) && !empty($x) && !empty($y)) {
+    $time = 0;
+    if (!is_null($r) && !is_null($x) && !is_null($y)) {
 
       if (!in_array($r, $validR)) {
         $result = "Invalid R";
@@ -33,7 +34,7 @@
         $result = "Invalid Y";
       }
 
-      if ((($x <= 0 && $y <= 0 && abs($x) <= $r && abs($y) <= $r)) ||
+      if ((($x <= 0 && $y >= 0 && abs($x) <= $r && abs($y) <= $r)) ||
           ($x >= 0 && $y >= 0 && ($x + $y <= $r)) ||
           ($x >= 0 && $y <= 0 && 4*($x*$x+$y*$y) <= $r*$r)) {
         $result = "Yes";
@@ -46,7 +47,7 @@
       fwrite($f," <tr>");
       fwrite($f," <td>$r</td> <td>$x</td> <td>$y</td> ");
       fwrite($f," <td>$result</td>");
-      fwrite($f," <td>$time</td>");
+      fwrite($f," <td>" . strval(number_format($time, 10, ".", "")*1000) . 'ms' . "</td>");
       fwrite($f," </tr>");
       fwrite($f,"\n");
       fclose($f);
@@ -87,7 +88,7 @@
                 </div>
                 <div class="table__card">
                     <p class="table__header">Time</p>
-                    <p class="table__number"><?php echo $time ?></p>
+                    <p class="table__number"><?php echo number_format($time, 10, ".", "")*1000 . 'ms' ?></p>
                 </div>
                 <div class="table__card">
                     <p class="table__header">Answer</p>
