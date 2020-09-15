@@ -79,13 +79,17 @@ li {
 }
 
 .header-section {
-    background-color: #ffa000;
+    background-color: #f9a825;
 }
 .hatter {
     display: flex;
+    align-items: center;
 }
 .hatter__logo {
 
+}
+.hatter__desc {
+  color: white;
 }
 .hatter__desc p {
     font-size: 20px;
@@ -118,7 +122,7 @@ li {
     flex-direction: column;
 }
 .main-offer-section {
-    padding-top: 150px;
+    padding: 110px 0;
 }
 /* --- Form --- */
 .main-offer {
@@ -135,18 +139,19 @@ li {
     margin-bottom: 13px;
 }
 .main-offer__text {
-    text-align: center;
+    text-align: left;
     font-size: 14px;
     line-height: 1.5em;
-    margin-bottom: 31px;
+    margin-bottom: 15px;
 }
 .main-offer__input {
     font-size: 13px;
+    /* font-family: serif; */
     /*transition: all 0.4s ease;*/
     border-bottom: 1px solid #ACACAC;
     padding-bottom: 12px;
-    margin-bottom: 22px;
-
+    margin-bottom: 10px;
+    position: relative;
 }
 .main-offer__input:last-child {
     margin-bottom: 26px;
@@ -166,12 +171,19 @@ li {
 .main-offer__input:focus {
     border-bottom-color: #000;
 }
+.main-offer__message {
+  color: red;
+  font-size: 14px;
+  display: block;
+  height: 15px;
+  margin-bottom: 30px;
+}
 .main-offer__btn {
     width: 270px;
     height: 60px;
     font-size: 16px;
     font-weight: 900;
-    background-color: #4ACC4D;
+    background-color: #f9a825;
     color: #fff;
     border-radius: 5px;
     margin-bottom: 17px;
@@ -181,11 +193,64 @@ li {
     box-shadow: 0 0 20px rgba(0,0,0,0.15)
 }
 .main-offer__btn:active {
-    background-color: #3CA73F;
+    background-color: #f57f17;
     box-shadow: 0 0 30px rgba(0,0,0,0.3)
 }
 .main-offer__subtext {
     color: #ADADAD;
     font-size: 12px;
     text-align: center;
+}
+/* --- loader --- */
+#loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(240, 240, 240, 0.91);
+    overflow: hidden;
+    display: none;
+}
+
+label {
+  transition: all ease 0.4s;
+}
+
+label.error {
+    font-size: 12px;
+    color: red;
+    bottom: 0;
+}
+
+input.error {
+    /* border: 1px solid red !important; */
+}
+input.error::placeholder {
+  color: red;
+}
+
+input.valid {
+    /* border: 1px solid green !important; */
+}
+
+#loader img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    margin-left: -25px;
+    top: 50%;
+    margin-top: -25px;
+}
+
+#overlay {
+display: none;
+position: absolute;
+width: 100%;
+height: 100%;
+background: #000c;
+left: 0px;
+top: 0px;
+cursor: pointer;
 }
