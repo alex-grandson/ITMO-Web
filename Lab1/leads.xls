@@ -9,3 +9,7 @@
 <tr> <td>1</td> <td>-2</td> <td>2</td>  <td>No</td> <td>0.0228882ms</td> </tr>
 <tr> <td>4</td> <td>-2</td> <td>3</td>  <td>Yes</td> <td>0.015974ms</td> </tr>
 <tr> <td>3</td> <td>-1.5</td> <td>2</td>  <td>Yes</td> <td>0.0309944ms</td> </tr>
+<tr> <td>5</td> <td>-2</td> <td>1</td>  <td>Yes</td> <td>0.0259876ms</td> </tr>
+<tr> <td>1</td> <td>-2</td> <td>3</td>  <td>No</td> <td>0.0231266ms</td> </tr>
+<tr> <td>1</td> <td>-2</td> <td>3</td>  <td>No</td> <td>0.0231266ms</td> </tr>
+<tr> <td>1</td> <td>-2</td> <td>3</td>  <td>No</td> <td>0.0150204ms</td> </tr>

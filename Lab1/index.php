@@ -30,7 +30,7 @@
 </div>
 <div class="section">
   <div class="main-offer">
-    <form action="#" method="GET" id="form" class="main-offer__form d-flex fd-column">
+    <form id="form" class="main-offer__form d-flex fd-column">
         <h3 class="main-offer__title">
             Лабораторная работа №1
         </h3>
