@@ -29,3 +29,9 @@
 .table__number {
     height: 15px;
 }
+.Yes {
+  color: green;
+}
+.No {
+  color: red;
+}

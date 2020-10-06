@@ -1,24 +1,11 @@
 <table>
 <meta charset="UTF-8">
-<tr> <td>0</td> <td>0</td> <td>0</td>  <td>Yes</td> <td>0.4439354ms</td> </tr>
-<tr> <td>0</td> <td>0</td> <td>0</td>  <td>Yes</td> <td>0.4241467ms</td> </tr>
-<tr> <td>0</td> <td>0</td> <td>0</td>  <td>Yes</td> <td>0.6358624ms</td> </tr>
-<tr> <td>0</td> <td>0</td> <td>0</td>  <td>Yes</td> <td>0.4229546ms</td> </tr>
-<tr> <td>0</td> <td>0</td> <td>0</td>  <td>Yes</td> <td>0.4131794ms</td> </tr>
-<tr> <td>0</td> <td>0</td> <td>0</td>  <td>Yes</td> <td>0.592947ms</td> </tr>
-<tr> <td>0</td> <td>0</td> <td>0</td>  <td>Yes</td> <td>0.5731583ms</td> </tr>
-<tr> <td>0</td> <td>0</td> <td>0</td>  <td>Yes</td> <td>0.5528927ms</td> </tr>
-<tr> <td>0</td> <td>0</td> <td>0</td>  <td>Yes</td> <td>1.0418892ms</td> </tr>
-<tr> <td>0</td> <td>0</td> <td>0</td>  <td>Yes</td> <td>0.6399155ms</td> </tr>
-<tr> <td>0</td> <td>0</td> <td>0</td>  <td>Yes</td> <td>0.6408691ms</td> </tr>
-<tr> <td>0</td> <td>0</td> <td>0</td>  <td>Yes</td> <td>0.6680489ms</td> </tr>
-<tr> <td>0</td> <td>0</td> <td>0</td>  <td>Yes</td> <td>0.4730225ms</td> </tr>
-<tr> <td>0</td> <td>0</td> <td>0</td>  <td>Yes</td> <td>0.5760193ms</td> </tr>
-<tr> <td>0</td> <td>0</td> <td>0</td>  <td>Yes</td> <td>0.7269382ms</td> </tr>
-<tr> <td>0</td> <td>0</td> <td>0</td>  <td>Yes</td> <td>0.4909039ms</td> </tr>
-<tr> <td>0</td> <td>0</td> <td>0</td>  <td>Yes</td> <td>0.60606ms</td> </tr>
-<tr> <td>0</td> <td>0</td> <td>0</td>  <td>Yes</td> <td>0.3960133ms</td> </tr>
-<tr> <td>1</td> <td>-2</td> <td>1</td>  <td>No</td> <td>0.025034ms</td> </tr>
-<tr> <td>1</td> <td>-2</td> <td>2</td>  <td>No</td> <td>0.0209808ms</td> </tr>
-<tr> <td>1</td> <td>-2</td> <td>2</td>  <td>No</td> <td>0.0138283ms</td> </tr>
+<tr> <td>1</td> <td>-2</td> <td>3</td>  <td>No</td> <td>0.0259876ms</td> </tr>
 <tr> <td>1</td> <td>-2</td> <td>2</td>  <td>No</td> <td>0.0150204ms</td> </tr>
+<tr> <td>1</td> <td>-2</td> <td>3</td>  <td>No</td> <td>0.0281334ms</td> </tr>
+<tr> <td>1</td> <td>-2</td> <td>2</td>  <td>No</td> <td>0.0271797ms</td> </tr>
+<tr> <td>1</td> <td>-2</td> <td>1</td>  <td>No</td> <td>0.015974ms</td> </tr>
+<tr> <td>1</td> <td>0</td> <td>3</td>  <td>No</td> <td>0.0350475ms</td> </tr>
+<tr> <td>1</td> <td>-2</td> <td>2</td>  <td>No</td> <td>0.0228882ms</td> </tr>
+<tr> <td>4</td> <td>-2</td> <td>3</td>  <td>Yes</td> <td>0.015974ms</td> </tr>
+<tr> <td>3</td> <td>-1.5</td> <td>2</td>  <td>Yes</td> <td>0.0309944ms</td> </tr>
