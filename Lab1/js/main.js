@@ -7,13 +7,13 @@ function fieldsEmpty() {
     var isEmpty = false;
 
     if (!r.value) {
-        r.style.borderBottom = "1px solid red";
+        // r.style.borderBottom = "1px solid red";
         $('#messageR').text("Это поле обязательно для заполнения");
         isEmpty = true;
     } else $('#messageR').text("");
 
     if (!x.value) {
-        x.style.borderBottom = "1px solid red";
+        // x.style.borderBottom = "1px solid red";
         $('#messageX').text("Это поле обязательно для заполнения");
         isEmpty = true;
     } else $('#messageR').text("");
