@@ -1,6 +1,7 @@
 var r = document.getElementById("r")
 var x = document.getElementById("x")
 var y = document.getElementById("y")
+var table = document.getElementById("table");
 
 function fieldsEmpty() {
     var isEmpty = false;
@@ -22,7 +23,6 @@ function fieldsEmpty() {
         $('#messageY').text("Это поле обязательно для заполнения");
         isEmpty = true;
     } else $('#messageR').text("");
-
     return isEmpty;
 }
 
@@ -38,54 +38,56 @@ function isValuesValid() {
       $('#messageX').text("Некорректный ввод");
       isOK = false;
     }
-    if (parseFloat(y.value) != NaN && (-5 > parseFloat(y.value) || parseFloat(y.value) > 3)) {
+    if (y.value > 3 || y.value < -5 || isNaN(y.value)){
       y.style.borderBottom = "1px solid red";
       $('#messageY').text("Некорректный ввод");
       isOK = false;
     }
+    // if (parseFloat(y.value) != NaN && (-5 > parseFloat(y.value) || parseFloat(y.value) > 3)) {
+    //   y.style.borderBottom = "1px solid red";
+    //   $('#messageY').text("Некорректный ввод");
+    //   isOK = false;
+    // }
     return isOK;
 }
 
+function writeTable() {
+
+
+}
+// let request = new XMLHttpRequest();
+//     request.open('GET','cgi-bin/save.php',true);
+//     request.addEventListener('readystatechange', function() {
+//       if ((request.readyState==4) && (request.status==200)) {
+//         console.log(request.responseText);
+//         if(request.responseText !== ''){
+//           document.getElementById('resultsOutput').style.opacity = 1;
+//           var mess = document.getElementById("resultTableBody");
+//           mess.insertAdjacentHTML('beforeend', request.responseText);
+//         }
+//       }
+//     });
+//     request.send();
 //Валидация и отправка формы
 
 $(document).ready(function() {
     $('[data-submit]').on('click', function(e) {
         e.preventDefault();
-        var isOkFields = !fieldsEmpty();
-        var isOkValues = isValuesValid();
+        let isOkFields = !fieldsEmpty();
+        let isOkValues = isValuesValid();
         if (isOkFields && isOkValues) {
           $(this).parent('form').submit();
-          $('#loader').fadeIn();
           var $form = $(form);
-          var $formId = $(form).attr('id');
+          let $formId = $(form).attr('id');
 
           if ($formId == 'form') {
                   $.ajax({
                       type: 'GET',
                       url: $form.attr('action'),
                       data: $form.serialize(),
+                      success:
                   })
-                  .always(function(response) {
-                      setTimeout(function() {
-                          $('#loader').fadeOut();
-                      }, 800);
-                      setTimeout(function() {
-                          $('#overlay').fadeIn();
-                          $form.trigger('reset');
-                          //строки для остлеживания целей в Я.Метрике и Google Analytics
-                      }, 1100);
-                      $('#overlay').on('click', function(e) {
-                          $(this).fadeOut();
-                      });
-
-                  });
-
           }
         }
-
-
     })
-
-
-
 });
