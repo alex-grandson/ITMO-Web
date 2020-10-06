@@ -1,30 +1,10 @@
 body {
     font-family: serif;
-    color: #000;
-    letter-spacing: 0.02em;
     font-size: 14px;
 }
-body, div, p, a, span, button, input, form, ul, li {
-    padding: 0;
-    margin: 0;
-}
-.container {
-    width: 1140px;
-    margin: 0 auto;
-}
-div, p, form, input, a, span, button {
-    box-sizing: border-box;
-}
-a, a:hover, a:active {
-    text-decoration: none;
-}
-a, button {
-    transition: all 0.5s ease;
-}
-button, input {
-    outline: none;
-    border: none;
-    background: transparent;
+body, div, p {
+  padding: 0;
+  margin: 0;
 }
 a, a:hover, a:active {
     text-decoration: none;
@@ -41,22 +21,6 @@ button, input {
     border: none;
     background: transparent;
 }
-.header-section {
-    background-color: #f9a825;
-}
-.hatter {
-    display: flex;
-    align-items: center;
-}
-.hatter__logo {
-
-}
-.hatter__desc {
-  color: white;
-}
-.hatter__desc p {
-    font-size: 20px;
-}
 .d-flex {
     display: -webkit-flex;
     display: -moz-flex;
@@ -71,22 +35,35 @@ button, input {
     -o-flex-direction: column;
     flex-direction: column;
 }
-.main-offer-section {
+
+/* header */
+.header-section {
+    background-color: #f9a825;
+}
+.hatter {
+    align-items: center;
+}
+.hatter__desc {
+  color: white;
+}
+.hatter__desc p {
+    font-size: 20px;
+}
+.section {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
     padding: 110px 0;
 }
-/* --- Form --- */
-.main-offer {
-    width: 333px;
-    padding: 35px 31px 35px;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 0 100px 23px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
+
+/* form */
+.main-offer__form {
+  padding: 20px;
 }
 .main-offer__title {
     font-size: 17px;
     text-align: center;
     margin-bottom: 13px;
+    margin-top: 0;
 }
 .main-offer__text {
     text-align: left;
@@ -134,7 +111,8 @@ button, input {
     background-color: #f9a825;
     color: #fff;
     border-radius: 5px;
-    margin-bottom: 17px;
+    margin-bottom: 7%;
+    margin: 0 auto;
     cursor: pointer;
 }
 .main-offer__btn:hover {
