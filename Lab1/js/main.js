@@ -7,13 +7,13 @@ function fieldsEmpty() {
     var isEmpty = false;
 
     if (!r.value) {
-        // r.style.borderBottom = "1px solid red";
+        r.style.borderBottom = "1px solid red";
         $('#messageR').text("Это поле обязательно для заполнения");
         isEmpty = true;
     } else $('#messageR').text("");
 
     if (!x.value) {
-        // x.style.borderBottom = "1px solid red";
+        x.style.borderBottom = "1px solid red";
         $('#messageX').text("Это поле обязательно для заполнения");
         isEmpty = true;
     } else $('#messageR').text("");
@@ -51,11 +51,6 @@ function isValuesValid() {
     return isOK;
 }
 
-function writeTable() {
-
-
-}
-
 //Валидация и отправка формы
 
 $(document).ready(function() {
@@ -64,32 +59,24 @@ $(document).ready(function() {
         let isOkFields = !fieldsEmpty();
         let isOkValues = isValuesValid();
         if (isOkFields && isOkValues) {
-
           $(this).parent('form').submit();
           var $form = $(form);
           let $formId = $(form).attr('id');
-
+          let dataString = document.URL.split('?')[1];
           if ($formId == 'form') {
             let r = new XMLHttpRequest();
-                r.open('GET', 'cgi-bin/save.php', true);
+                r.open('GET', '../save.php?' + dataString, true);
                 r.addEventListener('readystatechange', function() {
                   if ((r.readyState == 4) && (r.status == 200)) {
                     console.log(r.responseText);
                     if(r.responseText !== ''){
-                      //document.getElementById('resultsOutput').style.opacity = 1;
                       var table = document.getElementById("tbody");
                       table.insertAdjacentHTML('beforeend', r.responseText);
                     }
                   }
                 });
                 r.send();
-                  // $.ajax({
-                  //     type: 'GET',
-                  //     url: $form.attr('action'),
-                  //     data: $form.serialize(),
-                  //     // success:
-                  // })
           }
-        }
+      }
     })
 });

@@ -73,13 +73,15 @@ button, input {
 }
 .main-offer__input {
     font-size: 13px;
+    /* font-family: serif; */
+    /*transition: all 0.4s ease;*/
     border-bottom: 1px solid #ACACAC;
     padding-bottom: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
     position: relative;
 }
 .main-offer__input:last-child {
-    margin-bottom: 10%;
+    margin-bottom: 15%;
 }
 .main-offer__input::placeholder {
     transition: all 0.4s ease;
@@ -103,7 +105,7 @@ button, input {
   height: 15px;
   margin-bottom: 30px;
 }
-[data-submit] {
+.main-offer__btn {
     width: 270px;
     height: 60px;
     font-size: 16px;
@@ -126,4 +128,18 @@ button, input {
     color: #ADADAD;
     font-size: 12px;
     text-align: center;
+    margin-top: 15px;
+}
+
+/* table */
+#table {
+  padding: 20px;
+  width: 100%;
+}
+#table tbody tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+#table tbody tr td {
+  text-align: center;
 }
