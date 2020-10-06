@@ -55,19 +55,7 @@ function writeTable() {
 
 
 }
-// let request = new XMLHttpRequest();
-//     request.open('GET','cgi-bin/save.php',true);
-//     request.addEventListener('readystatechange', function() {
-//       if ((request.readyState==4) && (request.status==200)) {
-//         console.log(request.responseText);
-//         if(request.responseText !== ''){
-//           document.getElementById('resultsOutput').style.opacity = 1;
-//           var mess = document.getElementById("resultTableBody");
-//           mess.insertAdjacentHTML('beforeend', request.responseText);
-//         }
-//       }
-//     });
-//     request.send();
+
 //Валидация и отправка формы
 
 $(document).ready(function() {
@@ -76,17 +64,31 @@ $(document).ready(function() {
         let isOkFields = !fieldsEmpty();
         let isOkValues = isValuesValid();
         if (isOkFields && isOkValues) {
+
           $(this).parent('form').submit();
           var $form = $(form);
           let $formId = $(form).attr('id');
 
           if ($formId == 'form') {
-                  $.ajax({
-                      type: 'GET',
-                      url: $form.attr('action'),
-                      data: $form.serialize(),
-                      success:
-                  })
+            let r = new XMLHttpRequest();
+                r.open('GET', 'cgi-bin/save.php', true);
+                r.addEventListener('readystatechange', function() {
+                  if ((r.readyState == 4) && (r.status == 200)) {
+                    console.log(r.responseText);
+                    if(r.responseText !== ''){
+                      //document.getElementById('resultsOutput').style.opacity = 1;
+                      var table = document.getElementById("tbody");
+                      table.insertAdjacentHTML('beforeend', r.responseText);
+                    }
+                  }
+                });
+                r.send();
+                  // $.ajax({
+                  //     type: 'GET',
+                  //     url: $form.attr('action'),
+                  //     data: $form.serialize(),
+                  //     // success:
+                  // })
           }
         }
     })
