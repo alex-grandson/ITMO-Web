@@ -49,8 +49,8 @@ if (!is_null($r) && !is_null($x) && !is_null($y)) {
   array_push($_SESSION['results'], $result);
 
   // Печать в таблицу
-  echo '<tr><td>'.$x.'</td><td>'.$y.'</td><td>'.$r.'</td><td class="'.$message.'">'.$message.'</td><td>'.$time.'</td><td>'.$current_time.'</td></tr>';
-
+  print_r('<tr><td>'.$x.'</td><td>'.$y.'</td><td>'.$r.'</td><td class="'.$message.'">'.$message.'</td><td>'.$time.'</td><td>'.$current_time.'</td></tr>');
+  // header('Location: index.php');
 }
 
 

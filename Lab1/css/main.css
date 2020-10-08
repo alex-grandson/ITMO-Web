@@ -2,25 +2,31 @@ body {
     font-family: serif;
     font-size: 14px;
 }
+
 body, div, p {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
+
 a, a:hover, a:active {
     text-decoration: none;
 }
+
 a, button {
     transition: all 0.3s ease;
 }
+
 button {
     outline: none;
     cursor: pointer;
 }
+
 button, input {
     outline: none;
     border: none;
     background: transparent;
 }
+
 .d-flex {
     display: -webkit-flex;
     display: -moz-flex;
@@ -28,6 +34,7 @@ button, input {
     display: -o-flex;
     display: flex;
 }
+
 .fd-column {
     -webkit-flex-direction: column;
     -moz-flex-direction: column;
@@ -39,41 +46,57 @@ button, input {
 /* header */
 .header-section {
     background-color: #f9a825;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
+
 .hatter {
     align-items: center;
 }
+
 .hatter__desc {
-  color: white;
+    color: white;
 }
+
 .hatter__desc p {
     font-size: 20px;
 }
+
 .section {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-    padding: 110px 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
 }
 
 /* form */
 .main-offer__form {
-  padding: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    padding-top: 110px;
 }
+
 .main-offer__pic {
-  width: 100%;
+    width: 100%;
 }
+
 .main-offer__title {
     font-size: 17px;
     text-align: center;
     margin-bottom: 13px;
     margin-top: 0;
 }
+
 .main-offer__text {
     text-align: left;
     font-size: 14px;
     line-height: 1.5em;
     margin-bottom: 15px;
 }
+
 .main-offer__input {
     font-size: 13px;
     /* font-family: serif; */
@@ -83,31 +106,39 @@ button, input {
     margin-bottom: 4%;
     position: relative;
 }
+
 .main-offer__input:last-child {
     margin-bottom: 15%;
 }
+
 .main-offer__input::placeholder {
     transition: all 0.4s ease;
 }
+
 .main-offer__input:hover::placeholder {
 
 }
+
 .main-offer__input:focus::placeholder {
     color: #000;
 }
+
 .main-offer__input:hover {
     border-bottom-color: #000;
 }
+
 .main-offer__input:focus {
     border-bottom-color: #000;
 }
+
 .main-offer__message {
-  color: red;
-  font-size: 14px;
-  display: block;
-  height: 15px;
-  margin-bottom: 30px;
+    color: red;
+    font-size: 14px;
+    display: block;
+    height: 15px;
+    margin-bottom: 30px;
 }
+
 .main-offer__btn {
     width: 270px;
     height: 60px;
@@ -120,13 +151,16 @@ button, input {
     margin: 0 auto;
     cursor: pointer;
 }
+
 .main-offer__btn:hover {
-    box-shadow: 0 0 20px rgba(0,0,0,0.15)
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15)
 }
+
 .main-offer__btn:active {
     background-color: #f57f17;
-    box-shadow: 0 0 30px rgba(0,0,0,0.3)
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3)
 }
+
 .main-offer__subtext {
     color: #ADADAD;
     font-size: 12px;
@@ -136,13 +170,16 @@ button, input {
 
 /* table */
 #table {
-  padding: 20px;
-  width: 100%;
+    padding: 20px;
+    padding-top: 110px;
+    width: 100%;
 }
+
 #table tbody tr {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
+
 #table tbody tr td {
-  text-align: center;
+    text-align: center;
 }

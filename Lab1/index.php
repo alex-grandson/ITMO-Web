@@ -37,18 +37,6 @@
         <img src="img/pic1.jpg" alt="picture" class="main-offer__pic">
 
         <p class="main-offer__text">
-          Выберете R:
-          <select class="main-offer__select main-offer__select_R" name="r" id="r">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-          </select>
-        </p>
-        <p class="main-offer__message" id="messageR"></p>
-
-        <p class="main-offer__text">
           Выберете X:
           <select class="main-offer__select main-offer__select_R" name="x" id="x">
               <option value="-2">-2</option>
@@ -69,6 +57,18 @@
         </p>
         <input class="main-offer__input" type="text" name="y" id="y" placeholder="Введите Y" required>
         <p class="main-offer__message" id="messageY"></p>
+
+        <p class="main-offer__text">
+          Выберете R:
+          <select class="main-offer__select main-offer__select_R" name="r" id="r">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+          </select>
+        </p>
+        <p class="main-offer__message" id="messageR"></p>
 
         <button class="main-offer__btn" type="submit" data-submit>
             Тык

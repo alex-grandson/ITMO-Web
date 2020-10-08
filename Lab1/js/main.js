@@ -1,7 +1,6 @@
 var r = document.getElementById("r")
 var x = document.getElementById("x")
 var y = document.getElementById("y")
-var table = document.getElementById("table");
 
 function fieldsEmpty() {
     var isEmpty = false;
@@ -59,24 +58,44 @@ $(document).ready(function() {
         let isOkFields = !fieldsEmpty();
         let isOkValues = isValuesValid();
         if (isOkFields && isOkValues) {
-          $(this).parent('form').submit();
-          var $form = $(form);
-          let $formId = $(form).attr('id');
-          let dataString = document.URL.split('?')[1];
-          if ($formId == 'form') {
-            let r = new XMLHttpRequest();
-                r.open('GET', '../save.php?' + dataString, true);
-                r.addEventListener('readystatechange', function() {
-                  if ((r.readyState == 4) && (r.status == 200)) {
-                    console.log(r.responseText);
-                    if(r.responseText !== ''){
-                      var table = document.getElementById("tbody");
-                      table.insertAdjacentHTML('beforeend', r.responseText);
-                    }
-                  }
-                });
-                r.send();
-          }
+
+          $.ajax({
+              url: "../save.php",
+              async: true,
+              type: "GET",
+              data: {
+                  "x": x.value,
+                  "y": y.value,
+                  "r": r.value
+              },
+              cache: false,
+              success: function(response) {
+                var table = document.getElementById("tbody");
+                table.insertAdjacentHTML('beforeend', response);
+              },
+              error: function(xhr) {
+
+              }
+          });
+
+          // $(this).parent('form').submit();
+          // var $form = $(form);
+          // let $formId = $(form).attr('id');
+          // let dataString = 'x=${x.value}&y=${y.value}&r=${r.value}';
+          // if ($formId == 'form') {
+          //   let r = new XMLHttpRequest();
+          //       r.open('GET', '../save.php?' + dataString, true);
+          //       r.addEventListener('readystatechange', function() {
+          //         if ((r.readyState == 4) && (r.status == 200)) {
+          //           console.log(r.responseText);
+          //           if(r.responseText !== ''){
+          //             var table = document.getElementById("tbody");
+          //             table.insertAdjacentHTML('beforeend', r.responseText);
+          //           }
+          //         }
+          //       });
+          //       r.send();
+          // }
       }
     })
 });
