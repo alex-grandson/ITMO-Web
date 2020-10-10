@@ -41,7 +41,7 @@ if (!is_null($r) && !is_null($x) && !is_null($y)) {
 
   // Печать в таблицу
   print_r('<tr><td>'.$x.'</td><td>'.$y.'</td><td>'.$r.'</td><td class="'.$message.'">'.$message.'</td><td>'.$time.'</td><td>'.$current_time.'</td></tr>');
-  // header('Location: index.php');
+  
 }
 
 
