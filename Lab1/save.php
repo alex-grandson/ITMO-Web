@@ -31,15 +31,6 @@ if (!is_null($r) && !is_null($x) && !is_null($y)) {
   }
 
   $time = strval(number_format(microtime(true) - $start, 10, ".", "")*1000) . 'ms';
-  // Сохранение инфо о лидах в файл leads.xls
-  $f = fopen("leads.xls", "a+");
-  fwrite($f,"<tr>");
-  fwrite($f," <td>$r</td> <td>$x</td> <td>$y</td> ");
-  fwrite($f," <td>$message</td>");
-  fwrite($f," <td>" . $time . "</td>");
-  fwrite($f," </tr>");
-  fwrite($f,"\n");
-  fclose($f);
 
   // Сохранение в сессию
   $result = array($x, $y, $r, $message, $time, $current_time);

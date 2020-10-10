@@ -178,8 +178,46 @@ button, input {
 #table tbody tr {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 15px;
 }
 
 #table tbody tr td {
     text-align: center;
+}
+.table-section {
+  padding: 110px 0;
+}
+.table {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  text-align: center;
+  grid-gap: 2vw;
+}
+.table__card {
+    border-radius: 5%;
+    box-shadow: 0 0 100px 23px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+.table__header {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+.table__header::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.table__number {
+    height: 15px;
+}
+.Yes {
+  color: green;
+}
+.No {
+  color: red;
 }

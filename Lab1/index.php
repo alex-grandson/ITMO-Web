@@ -5,7 +5,6 @@
     <title>LAB_1</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="/css/table.css">
     <!-- Favicon -->
     <link rel="icon" href="img/favicon/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
@@ -70,7 +69,7 @@
         </p>
         <p class="main-offer__message" id="messageR"></p>
 
-        <button class="main-offer__btn" type="submit" data-submit>
+        <button class="main-offer__btn" data-submit>
             Тык
         </button>
         <p class="main-offer__subtext">
@@ -91,16 +90,17 @@
             </tr>
             <?php
             session_start();
-            foreach ($_SESSION['results'] as $result) { ?>
-            <tr>
-              <td><?php echo $result[0] ?></td>
-              <td><?php echo $result[1] ?></td>
-              <td><?php echo $result[2] ?></td>
-              <td class="<?php echo $result[3] ?>"><?php echo $result[3] ?></td>
-              <td><?php echo $result[4] ?></td>
-              <td><?php echo $result[5] ?></td>
-            </tr>
-            <?php } ?>
+            if (isset($_SESSION['results'])) {
+              foreach ($_SESSION['results'] as $result) { ?>
+              <tr>
+                <td><?php echo $result[0] ?></td>
+                <td><?php echo $result[1] ?></td>
+                <td><?php echo $result[2] ?></td>
+                <td class="<?php echo $result[3] ?>"><?php echo $result[3] ?></td>
+                <td><?php echo $result[4] ?></td>
+                <td><?php echo $result[5] ?></td>
+              </tr>
+          <?php }} ?>
         </tbody>
     </table>
   </div>
